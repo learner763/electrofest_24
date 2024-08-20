@@ -185,8 +185,9 @@ let events=["Logic!","Wars!","SOC!","Route!","Wired!","Tekken!","Fifa!","Valoran
 data_+=events[item]
         if(w==0)
         {
-                    window.location.href = '/index.html'; 
 fetch('/login.html', {
+            window.location.href = '/index.html'; 
+
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
