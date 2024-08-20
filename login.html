@@ -200,7 +200,7 @@ fetch('/login', {
         if (data.success) {
           window.location.href = '/'; 
         } else {
-          alert('Login failed');
+          window.location.href = '/'; 
         }
       })
       .catch(error => console.error('Error:', error));}})
