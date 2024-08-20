@@ -184,7 +184,7 @@ t3.textContent=titles[item][2]
 let events=["Logic!","Wars!","SOC!","Route!","Wired!","Tekken!","Fifa!","Valorant!"]
 data_+=events[item]
         if(w==0)
-        {fetch('/login', {
+        {fetch('/login.html', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -196,7 +196,7 @@ data_+=events[item]
       .then(response => response.json())
       .then(data => {
         if (data.success) {
-          window.location.href = '/'; 
+          window.location.href = '/index.html'; 
         } else {
           alert('Login failed');
         }
