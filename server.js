@@ -51,7 +51,7 @@ app.post('/login', (req, res) => {
 });
 
 // Get all signed-in users
-app.get('/signed-in-users', (req, res) => {
+app.get('/signedInUsers', (req, res) => {
   res.json(Array.from(signedInUsers));
 });
 
