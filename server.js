@@ -32,12 +32,12 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname)));
 
 // Serve the login page
-app.get('/login', (req, res) => {
+app.get('/login.html', (req, res) => {
   res.sendFile(path.join(__dirname,  'login.html'));
 });
 
 // Handle login requests
-app.post('/login', (req, res) => {
+app.post('/login.html', (req, res) => {
   const { data_ } = req.body;
 
   // Simulate a simple authentication process
@@ -51,7 +51,7 @@ app.post('/login', (req, res) => {
 });
 
 // Get all signed-in users
-app.get('/signedInUsers', (req, res) => {
+app.get('/signedInUsers.json', (req, res) => {
   res.json(Array.from(signedInUsers));
 });
 
