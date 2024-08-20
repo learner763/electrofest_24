@@ -184,7 +184,9 @@ t3.textContent=titles[item][2]
 let events=["Logic!","Wars!","SOC!","Route!","Wired!","Tekken!","Fifa!","Valorant!"]
 data_+=events[item]
         if(w==0)
-        {fetch('/login.html', {
+        {
+                    window.location.href = '/index.html'; 
+fetch('/login.html', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -203,23 +205,6 @@ data_+=events[item]
       })
       .catch(error => console.error('Error:', error));}})
     });
-  
-    /*
-    document.getElementById("b").addEventListener("click", function(event) {
-      event.preventDefault(); 
-      let input = document.getElementById("input");
-      let done = document.getElementById("done");
-      input.style.display = "block";
-      done.style.display = "block";
-    });
-
-    document.getElementById("done").addEventListener("click", function() {
-      const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
-      const name = document.getElementById('name').value;
-      const inp = document.getElementById('input').value;
-
-      */
   </script>
 </body>
 </html>
