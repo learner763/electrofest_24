@@ -1,0 +1,165 @@
+body{
+    margin: 0;
+    background-color:#15050f;
+}
+html{
+    scroll-behavior: smooth;
+}
+.a label{
+    text-decoration: none;
+}
+.a label,button{
+    margin: 10px;
+    cursor: pointer;
+}
+.a label:hover{
+    color: yellow;
+}
+
+#b1:hover{
+    background-color: yellow;
+    color: black;
+}
+#b1{
+    border: yellow solid;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+
+.b label{
+    font-size: 50px;
+    font-weight: bolder;
+}
+.c{
+    background-color:#221210;
+}
+.e{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.e label:hover{
+    background-color: black;
+    
+}
+.e label{
+    margin: 30px;
+    border: yellow solid;
+    border-width: 2px;
+    border-radius: 10px;
+    background-color:#221210;
+    width: 220px;
+    cursor: pointer;
+}
+.f{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 30px;
+    
+}
+.sponsors{
+    display: flex;
+    flex-direction: column;
+    border: yellow solid;
+    border-radius: 10px;
+    border-width: 3px;
+    justify-content: center;
+    align-items: center;
+    background-color: #15050f;
+    cursor: pointer;
+    margin: 30px;
+
+}
+.f img{
+    margin: 15px;
+    width: 220px;
+    height: 200px;
+}
+
+.titles{
+    color: yellow;font-size: 20px;
+}
+.g{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.g label{
+    width: 200px;
+    border: yellow solid;
+    margin: 10px;
+    border-radius: 10px;
+    border-width: 3px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #221210;
+}
+.g label:hover{
+    background-color: yellow;
+    .titles{color: black;}
+}
+.h{
+    display: flex;
+    flex-direction: column;
+    background-color: #15050f;
+    border: yellow solid;
+    border-radius: 10px;
+    margin: 20px;
+    width: fit-content;
+    cursor: pointer;
+     
+}
+.i{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.i label,textarea{
+    margin-top: 10px;
+}
+.i textarea{
+    border-radius: 10px;
+    border: white solid;
+    background-color: yellow;
+}
+.e button{
+    border: none;border-radius: 10px; background-color: yellow; color: black;margin: 5px;
+}
+.details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+    flex-wrap: wrap;
+    
+
+}
+.info{
+    font-style: italic;
+    background-color: #221210;
+    margin: 100px;
+    border-radius: 10px;
+    border: yellow solid;
+}
+.d_{
+    display: flex;
+    flex-direction: column;
+    color: yellow;
+    font-size: 15px;
+}
+.d_ input{
+    border: white solid;
+    border-radius: 10px;
+    background-color: yellow;
+    font-style: italic;
+
+}
+.cat{
+    margin: 10px;
+}

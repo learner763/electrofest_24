@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <div class="a" style="top: 0; flex-wrap:wrap; background-color: black; width: 100%; position: fixed;  display: block;color: white;font-size: 20px;display: flex; justify-content: center;">
+    <label style="color: darkgreen;font-weight: bolder;">ElecroFest '24</label>
+    <label >About</label>
+    <label>Event Timeline</label>
+    <label>Sponsors</label>
+    <label>Collaborators</label>
+    <label>FAQs</label>
+    <label>Contact</label>
+    <button class="but" id="b1" >Register</button>
+    <label >All Registrations</label>
+  </div>
+
+  <div class="b" style=" width: 100%; margin-top: 42px; justify-content: space-around; flex-direction: row; display: flex; background-color: black;flex-wrap: wrap-reverse;">
+    <label style="margin-top: 20px;  color: white; align-self: center;"><n id="t1"></n><p id="t2" style="font-size: 30px; color: gray;">
+       </p>
+       <p id="t3" style="font-size: 30px;color: gray;"> </p></label>
+    <img width="400px" style="margin-top: 20px; margin-bottom: 20px;"  src="efest.png" alt="">
+  </div>
+
+  <div class="info">
+  <div style="width: 100%;display: flex;justify-content: center;align-items: center;margin-top: 50px;">
+    <label style=" color: yellow;font-weight: bolder;font-size: 25px; flex-direction: row; ">REGISTER</label>
+  </div>
+
+<div class="details">
+  <div class="d_">
+    <label class="hide" style="color: yellow;font-size: 20px;">Team Lead</label>
+  </div>
+</div>
+<div class="details">
+  <div class="d_">
+    <label  >Full Name*</label>
+    <input type="text">
+  </div>
+  <div class="d_">
+    <label >Email*</label>
+    <input type="text">
+  </div>
+  
+</div>
+
+<div class="details">
+  <div class="d_">
+    <label >Contact*</label>
+    <input type="number">
+  </div>
+  <div class="d_">
+    <label id="CNIC">Team Name*</label>
+    <input type="text">
+  </div>
+</div>
+<div class="hide">
+<div style="width: 100%;display: flex;justify-content: center;align-items: center;margin-top: 50px;">
+  <label style=" color: yellow;font-size: 20px; flex-direction: row; ">Team Member 2</label>
+</div>
+<div class="details">
+  <div class="d_">
+    <label >Full Name*</label>
+    <input type="text">
+  </div>
+  <div class="d_">
+    <label >Email*</label>
+    <input type="text">
+  </div>
+  
+  
+</div>
+<div style="width: 100%;display: flex;justify-content: center;align-items: center;margin-top: 50px;">
+  <label style=" color: yellow;font-size: 20px; flex-direction: row; ">Team Member 3</label>
+</div>
+<div class="details">
+  <div class="d_">
+    <label >Full Name*</label>
+    <input type="text">
+  </div>
+  <div class="d_">
+    <label >Email*</label>
+    <input type="text">
+  </div>
+  
+  
+</div>
+<div style="width: 100%;display: flex;justify-content: center;align-items: center;margin-top: 50px;">
+  <label style=" color: yellow;font-size: 20px; flex-direction: row; ">Team Member 4</label>
+</div>
+<div class="details">
+  <div class="d_">
+    <label >Full Name*</label>
+    <input type="text">
+  </div>
+  <div class="d_">
+    <label >Email*</label>
+    <input type="text">
+  </div>
+  
+  
+</div>
+</div>
+<div style="width: 100%;display: flex;justify-content: center; align-items: center;"><button id="submit" style="font-style: italic; color: white; background-color: #221210;">Submit</button></div>
+<div  style="color: white; display: flex;justify-content: center;align-items: center;"><n id="rs">Fee registration challan will be sent to team lead's email.</n></div>
+</div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded",function()
+  {
+    let item=localStorage.getItem("item")
+    item=parseInt(item)
+    let submit=document.getElementById("submit")
+    let t1=document.getElementById("t1")
+    let t2=document.getElementById("t2")
+    let t3=document.getElementById("t3")
+    let inputs=document.querySelectorAll(".d_ input")
+    let titles=[["LOGIC BLITZ","Unleash your mind,","conquer the challenge!"],["ROBOWARS","Gear up for mechanical mayhem","in the ultimate ROBOWARS showdown!" ],["SOC DESIGN","Join the RISC-V revolution and","shape the future of computing!"],["Robo Route",
+"Feel the thrill as your bot takes", "on the line-following challenge!"],["WIRED WIZARDS",
+"Fuel your passion for circuits and connections!","Join our patching competition"],
+["TEKKEN","Gear up, drop in, and survive the ultimate" ," battle royale in Tekken's gaming arena!"],
+["FIFA","Gear up, drop in, and survive the ultimate" ," battle royale in FIFA's gaming arena!"],
+["VALORANT","Gear up, drop in, and survive the ultimate" ," battle royale in Valorant's gaming arena!"]
+]
+t1.textContent=titles[item][0]
+t2.textContent=titles[item][1]
+t3.textContent=titles[item][2]
+    let hide=document.getElementsByClassName("hide")
+    let cnic=document.getElementById("CNIC")
+    let rs=document.getElementById("rs")
+    if([0,5,6,7].includes(item))
+  {
+    cnic.textContent="CNIC*"
+    let r=rs.textContent
+    r=r.replace("team lead's","your")
+    rs.textContent=r
+    for(let i=0;i<hide.length;i++)
+  {
+    hide[i].style.display="none"
+    
+  }
+  }
+    let icons =document.querySelectorAll(".a label")
+    let loc=["#About","#EventTimeline","#Sponsors","#Collaborators","#FAQ","#Contact","#Registrations"]
+    for(let i=1;i<icons.length;i++)
+  {
+    icons[i].addEventListener("click",function()
+  {
+    for(let j=1;j<icons.length;j++)
+    {icons[j].style.color="white"}
+    icons[i].style.color="yellow"
+    window.location.href="/"
+    window.location.href=loc[i-1]
+  })
+  }
+
+
+  submit.addEventListener("click",function()
+{
+  let w=0
+  let l
+  let data_=""
+  if([0,5,6,7].includes(item))
+  { l=4
+  }
+  else{l=10}
+  for(let i=0;i<l;i++)
+{
+  if(inputs[i].value=="")
+{
+  w=1
+}
+  else{
+  data_+=(inputs[i].value)
+  data_+="!"
+  }
+
+}
+let events=["Logic!","Wars!","SOC!","Route!","Wired!","Tekken!","Fifa!","Valorant!"]
+data_+=events[item]
+        if(w==0)
+        {fetch('/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        
+        body: JSON.stringify({ data_ }),
+      
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          window.location.href = '/'; 
+        } else {
+          alert('Login failed');
+        }
+      })
+      .catch(error => console.error('Error:', error));}})
+    });
+  
+    /*
+    document.getElementById("b").addEventListener("click", function(event) {
+      event.preventDefault(); 
+      let input = document.getElementById("input");
+      let done = document.getElementById("done");
+      input.style.display = "block";
+      done.style.display = "block";
+    });
+
+    document.getElementById("done").addEventListener("click", function() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const name = document.getElementById('name').value;
+      const inp = document.getElementById('input').value;
+
+      */
+  </script>
+</body>
+</html>
