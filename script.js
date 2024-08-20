@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('/signed-in-users')
+    fetch('/signedInUsers.json')
       .then(response => response.json())
       .then(users => {
         let div=document.getElementById("Registrations")
